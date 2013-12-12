@@ -4,7 +4,7 @@ Donate link: http://www.bizxpress.com
 Tags: keywords,keyword research,brainstorming,business,business-building,link-building,SEO
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Build a successful online business with WordPress.
@@ -88,6 +88,9 @@ Please direct your support inquiry directly to our dedicated site and we'll be h
 [support.sitesell.com](http://support.sitesell.com/)
 
 == Changelog ==
+= 1.0.2 =
+* Fixed broken dashboard widget for 3.8
+
 = 1.0.1 =
 * Fixed bad links
 
