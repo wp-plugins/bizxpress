@@ -3,7 +3,7 @@
 	<?php $this->load_template('header'); ?>
 
 
-   <div class="container">
+      <div class="container">
 
     <div class="row">
 
@@ -21,14 +21,15 @@
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <h2><i class="icon-book big-icon"></i> Action Guide</h2>
+                        <h2><a href="<?php echo $env->link_url('ACTION_GUIDE'); ?>"><i class="icon-book big-icon"></i> Action Guide</a></h2>
                         <p>
-                        The bizXpress Action Guide shows you, step-by-step, how to build, market and grow your new website and online business.
+                        The bizXpress Action Guide shows you, step-by-step, how to build, market and grow your new online business.
                         </p>
                     </div>
                     <div class="list-group">
                         <a class="list-group-item" href="<?php echo $env->link_url('ACTION_GUIDE'); ?>">Action Guide</a>
                         <a class="list-group-item" href="<?php echo $env->link_url('ACTION_GUIDE'); ?>">Video Action Guide</a>
+                        <a class="list-group-item" href="<?php echo $env->link_url('ACTION_GUIDE'); ?>">Mobile Action Guide</a>
                         <!--<a class="list-group-item" href="<?php echo $env->link_url('ACTION_GUIDE'); ?>#Supplementals">Supplemental Videos</a>-->
                     </div>
                 </div>
@@ -38,14 +39,15 @@
                 <div class="panel panel-info">
                     <div class="panel-heading">
 
-                        <h2><i class="icon-gears big-icon"></i> Research</h2>
+                        <h2><a href="<?php echo $env->link_url('NR'); ?>" target="_blank"><i class="icon-gears big-icon"></i> Research</a></h2>
                         <p>
-                        A collection of unique tools to research and develop a Site Concept that you can build into a successful online business.
+                        Advanced research tools help you make smart business decisions for maximizing results.
                         </p>
                         <div class="news">
-                            <p>Check out the MKL's latest Groups function.</p>
+                           
                         </div>
                     </div>
+                    
                     <div class="list-group">
                         <a class="list-group-item" href="<?php echo $env->link_url('bxp_brainstormit'); ?>" target="_blank">Brainstormer</a>
                         <a class="list-group-item" href="<?php echo $env->link_url('bxp_mkl'); ?>" target="_blank">MKL</a>
@@ -53,11 +55,13 @@
                     </div>
                 </div>
             </div>
+            
+            <br style="clear:both">
 
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <h2><i class="icon-info-sign big-icon"></i> Business Information</h2>
+                        <h2><a href="<?php echo $env->link_url('BHQ'); ?>"><i class="icon-info-sign big-icon"></i> Business Information</a></h2>
                         <p>
                         A large collection of articles, books, and how-to's covering all business building topics.
                         </p>
@@ -66,6 +70,7 @@
                         <a class="list-group-item" href="<?php echo $env->link_url('bxp_tips_n_techniques_hq'); ?>" target="_blank">Tips and Techniques HQ</a>
                         <a class="list-group-item" href="<?php echo $env->link_url('bxp_mhq'); ?>" target="_blank">Monetization HQ</a>
                         <a class="list-group-item" href="<?php echo $env->link_url('bxp_resources_hq'); ?>" target="_blank">Resources HQ</a>
+                        <a class="list-group-item" href="<?php echo $env->link_url('BHQ'); ?>">Books</a>
                     </div>
                 </div>
             </div>
@@ -73,16 +78,16 @@
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <h2><i class="icon-sun big-icon"></i> Guidance</h2>
+                        <h2><a href="<?php echo $env->link_url('GUIDANCE'); ?>"><i class="icon-sun big-icon"></i> Guidance</a></h2>
                         <p>
-                        The bizXpress Forums, world class support, your account information.
+                        The Forums, world class support, professional coaching and services, and your account information.
                         </p>
                     </div>
                     <div class="list-group">
-                        <a class="list-group-item" href="<?php echo $env->link_url('FORUMS'); ?>" target="_blank">The bizXpress Forums - THE help and be helped online business-building community</a>
-                        <a class="list-group-item" href="<?php echo $env->link_url('bxp_my_account'); ?>" target="_blank">My Account Information</a>
-                        <a class="list-group-item" href="<?php echo $env->link_url('GUIDANCE'); ?>" target="_blank">Coaching HQ</a>
-                        <a class="list-group-item" href="<?php echo $env->link_url('GUIDANCE'); ?>" target="_blank">Contact Support</a>
+                        <a class="list-group-item" href="<?php echo $env->link_url('FORUMS'); ?>">The Forums</a>
+                        <a class="list-group-item" href="<?php echo $env->link_url('GUIDANCE'); ?>">Professional Coaching</a>
+                       <a class="list-group-item" href="<?php echo $env->link_url('GUIDANCE'); ?>">Professional Services</a>
+                        <a class="list-group-item" href="<?php echo $env->link_url('GUIDANCE'); ?>">Support</a>
                     </div>
                 </div>
             </div>
