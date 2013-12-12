@@ -1,0 +1,82 @@
+/*   nav styles   */
+#nav1 {
+	background:#0085cf;
+	padding:0px 20px;
+	min-height:65px;
+}
+#name {
+	margin-top:28px;
+	color:#fff;
+}
+#nav2 {
+	background:#efefef;
+	padding:0px 10px;
+	color:#fff;
+	border-bottom:3px solid #ddd;
+}
+#nav1 a {
+	box-shadow:none;
+	text-shadow:none;
+	color:#fff;
+	font-family: 'Roboto';
+}
+#nav2 li > a { background:none;}
+#nav2 a {
+	color:#333;
+	box-shadow:none;
+	text-shadow:none;
+	padding:0px 10px;
+	margin-top:9px;
+	font-weight:bold;
+}
+#nav2 a:hover {
+	color:#0085cf;
+}
+.subhead {
+	font-weight:normal;
+	font-size:44%;
+	letter-spacing:0px;
+	float:right;
+	color:#efefef;
+}
+#caret {
+	font-size:140%;
+	margin-left:4px;
+	padding:0px;
+	font-weight:bold;
+}
+#submenu {
+	left:208px;
+	top:36px;
+	padding-bottom:10px;
+}
+#submenu a {
+	color:#0085cf;
+	padding:7px 20px;
+}
+#submenu a:hover {
+	background:#0085cf;
+	color:#fff;
+}
+
+/*   additional side menu styles  */
+.big-icon {
+	font-size:24px;
+	color: #0085CF;
+	text-align:center;
+}
+.nolink {
+	color:#000;
+}
+a:hover.nolink {
+	color:#000;
+	text-decoration:none;
+}
+.sidemenu_3col h4 { margin-top:0px;}
+.sidemenu_3col li {
+	border:none;
+}
+
+.wp-bxp .navbar .nav {
+    margin-bottom: 0;
+}

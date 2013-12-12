@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+h2 {
+margin:12px 0;
+}
+.golink {
+text-align: center;
+}
+.panel-heading h2, .panel-heading .big-icon {
+color:#333;
+}	
+.panel-info {
+border-color: #c4c4c4;
+}
