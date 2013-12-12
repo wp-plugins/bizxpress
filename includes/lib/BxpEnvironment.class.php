@@ -24,11 +24,11 @@ class Bxp_Environment {
 	 */
 	public function __construct($force_prod=false)
 	{
-		$this->env_file = dirname(__FILE__) . '/../dev_info.json';
+		$this->env_file = dirname(__FILE__) . '/../dev_info.ini';
 		
 		if ( $this->is_dev( $force_prod ) )
 		{
-			$this->settings = json_decode(file_get_contents($this->env_file));
+			$this->settings = parse_ini_file($this->env_file, true);
 		}
 		else
 		{
@@ -37,16 +37,16 @@ class Bxp_Environment {
 		}
 		
 		// Set up links based on the .ini file
-		$this->links_file   = dirname(__FILE__) . '/../bxp_links.ini';
+		$this->links_file   = dirname(__FILE__) . '/../bxp_links.json';
 		$cluster_servername = str_replace('//','',$this->settings['BASE']['url']);
-		$links              = parse_ini_file($this->links_file, true);
+		$links              = json_decode(file_get_contents($this->links_file));
 		
 		foreach ($links as $key => $val)
 		{
-			$links[$key] = str_replace('{__BXP_CLUSTER_SERVERNAME__}', $cluster_servername, $val);
+			$links->{$key} = array('url' => str_replace('${__BXP_CLUSTER_SERVERNAME__}', $cluster_servername, $val->url));
 		}
 		
-		$this->settings['_links'] = $links;
+		$this->settings['_links'] = (array) $links;
 		
 		$this->set_admin_urls();
 		
