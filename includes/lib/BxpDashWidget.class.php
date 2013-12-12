@@ -66,7 +66,11 @@ class BxpDashWidget extends BizXpress {
 		}
 		
 		// Add the dashboard widget
-		wp_add_dashboard_widget( $widget_id, $this->widget_options[$widget_id]['title'], array(&$this, 'whats_new_rss'), array(&$this, 'whats_new_rss_control'));
+		wp_add_dashboard_widget( $widget_id, // widget slug 
+								 $this->widget_options[$widget_id]['title'], // title 
+								 array(&$this, 'whats_new_rss'), // display function
+								 array(&$this, 'whats_new_rss_control') // control function
+		);
 		
 		// Save default options if needed
 		if ( $update )
@@ -82,7 +86,6 @@ class BxpDashWidget extends BizXpress {
 	public function whats_new_rss()
 	{	
 		$this->whats_new_rss_output();
-// 		wp_dashboard_cached_rss_widget( self::WHATS_NEW_RSS_ID, array(&$this, 'whats_new_rss_output'), array($this->whats_new_url) );
 	}
 	
 	
@@ -107,31 +110,9 @@ class BxpDashWidget extends BizXpress {
 		$widgets = $this->get_widget_options();
 		$value = @$widgets[self::WHATS_NEW_RSS_ID];
 		
-		@extract( $value, EXTR_SKIP );
-		
-		# N.B. Noticed in WP.3.7.1, this raises a strict warning due to a SimplePie/Wordpress bug
-		# call_user_func_array() expects parameter 1 to be a valid callback, 
-		# non-static method WP_Feed_Cache::create() should not be called statically on line 215 in file /Volumes/sitesell-dev/Wordpress/wordpress/wp-includes/SimplePie/Registry.php
-		# See: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=669054
-		$rss = @fetch_feed( $url );
-		
-		if ( is_wp_error($rss) ) {
-			if ( is_admin() || current_user_can('manage_options') ) {
-				echo '<div class="rss-widget"><p>';
-				printf(__('<strong>RSS Error</strong>: %s'), $rss->get_error_message());
-				echo '</p></div>';
-			}
-		} elseif ( !$rss->get_item_quantity() ) {
-			$rss->__destruct();
-			unset($rss);
-			return false;
-		} else {
-			echo '<div class="rss-widget">';
-			wp_widget_rss_output( $rss, $widgets[self::WHATS_NEW_RSS_ID] );
-			echo '</div>';
-			$rss->__destruct();
-			unset($rss);
-		}
+		echo '<div class="rss-widget">';
+		wp_widget_rss_output( $widgets[self::WHATS_NEW_RSS_ID] );
+		echo "</div>";
 	}
 
 	
