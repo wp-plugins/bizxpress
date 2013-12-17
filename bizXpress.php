@@ -3,7 +3,7 @@
 * Plugin Name:   bizXpress
 * Plugin URI:	 http://www.bizxpress.com
 * Description:   bizXpress is the only plugin for WordPress that can take you from struggling webmaster or blogger to successful entrepreneur earning a sustainable income from your website. It contains everything you need to build your online business, from keyword research tools to how-to site-building and monetization articles to supportive forums. 
-* Version:       1.0.2
+* Version:       1.0.3
 * Author:        SiteSell, Inc.
 * Author URI:    http://www.bizxpress.com
 *
@@ -13,7 +13,7 @@
 */
 class BizXpress {
 	
-	const VERSION = '1.0.2';
+	const VERSION = '1.0.3';
 
 	public $domain = 'BizXpress';
 	public $my_opts_slug = 'bxp_options';
