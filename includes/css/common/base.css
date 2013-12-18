@@ -13,6 +13,9 @@ body, body.popup { background:#fff; }
 .container {
 	margin-top:144px;
 	padding-top:24px;
+    *padding-top: 168px;
+    _padding-top: 24px;
+    _margin-top: 0;
 	background:#fff;
 }
 .span12 {
@@ -169,12 +172,7 @@ ul.loose li {
 	margin-left: 0;
 }
 
-.wp-bxp .offset1 {
-	margin-left: 30px;
-}
-
 .wp-bxp .container {
-	width: 820px;
     margin-top: 0;
 }
 
@@ -192,22 +190,143 @@ ul.loose li {
 	.wp-bxp .container {
 		width: 600px;
 	}
-
-	.span10 {
-		width: auto;
-	}
-}
-
-@media (min-width: 1200px) {
-	.wp-bxp .container {
-		width: 1000px;
-	}
-
-	.wp-bxp .offset1 {
-		margin-left: 50px;
-	}
 }
 
 #adminmenuback {
 	z-index: 0 !important;
+}
+
+.simpleError {
+	margin: 1em 0;
+	color: #C00;
+}
+
+/* temporary CSS to fix differences between Bootstrap 2 and 3 */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+#nav2 {
+    overflow: hidden;
+}
+
+.navbar .nav > li {
+    float: left;
+}
+
+.navbar-inner {
+    min-height: 43px;
+}
+
+.navbar-inner img {
+    height: auto;
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+    border-bottom: 1px solid #D4D4D4;
+}
+
+/* panel */
+
+.panel h2,
+.panel h3 {
+    margin:12px 0;
+}
+
+.golink {
+    text-align: center;
+}
+
+.panel-heading h2,
+.panel-heading h3,
+.panel-heading .big-icon {
+    color: #333;
+}
+
+.panel-primary h2 {
+    color: #fff;
+}
+
+.panel-info {
+    border-color: #c4c4c4;
+}
+
+.panel-heading h2 a,
+.panel-heading h2 a i  {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.panel-heading h2 a:hover,
+.panel-heading h2 a:hover i {
+    text-decoration: none;
+    color: #555;
+}
+
+.panel .panel-title {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Action Guide */
+.headline-msg {
+    font-size: 12px !important;
+    position: absolute;
+    right: 0;
+    top: -44px;
+}
+
+.ag-table h3 {
+    margin: 0.5em 5px;
+}
+
+.ag-table p {
+    margin: 0.2em 5px;
+}
+
+.ag-table td.day {
+    padding: 0.5em 15px;
+    text-align: center;
+    font-family: Merriweather;
+    vertical-align: middle;
+}
+
+.ag-table .iconText {
+    font-size: 14px;
+}
+
+.ag-table .icon {
+    color: #428BCA;
+}
+
+.ag-table .big-icon {
+    vertical-align: -6px;
+}
+
+.ag-table small {
+    font-size: 70%;
+}
+
+div.ag-link {
+    white-space: nowrap;
+}
+
+.ag-table h3 {
+    margin-bottom:0;
+}
+
+.ag-table td p {
+    color:#666;
+    font-size:95%;
 }

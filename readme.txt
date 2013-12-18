@@ -4,7 +4,7 @@ Donate link: http://www.bizxpress.com
 Tags: keywords,keyword research,brainstorming,business,business-building,link-building,SEO
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Build a successful online business with WordPress.
@@ -25,7 +25,7 @@ The bizXpress Action Guide is your roadmap to traffic and income. Conveniently d
 
 **Exclusive Keyword Research Tools**
 
-Even (or especially) if you've yet to come up with the "Million Dollar Idea" for your online business, no worries. bizXpress includes Brainstorm It!, the world's first smart brainstormer, niche-picker, and keyword researcher. Find potential Site Concepts for your business, even if you're only starting with a general idea. Check out the video below...
+Even (or especially) if you've yet to come up with the "Million Dollar Idea" for your online business, no worries. bizXpress includes Brainstorm It!, the world's first smart brainstormer, niche-picker, and keyword researcher. Find potential Site Concepts for your business, even if you're only starting with a general idea.
 
 **Exclusive Knowledge Base**
 
@@ -88,14 +88,17 @@ Please direct your support inquiry directly to our dedicated site and we'll be h
 [support.sitesell.com](http://support.sitesell.com/)
 
 == Changelog ==
+= 1.0.3 =
+* CSS and link enhancements
+
 = 1.0.2 =
-* Fixed broken dashboard widget for 3.8
+* Update dashboard widget for WordPress 3.8
 
 = 1.0.1 =
-* Fixed bad links
+* Resource cleanup
 
 = 1.0 =
-* Initial release
+* bizXpress release
 
 == Upgrade Notice ==
 No need to upgrade at this time.
