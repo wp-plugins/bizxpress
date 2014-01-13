@@ -85,7 +85,7 @@ There are 3 ways to install bizXpress:
 
 Please direct your support inquiry directly to our dedicated site and we'll be happy to help you.
 
-[support.sitesell.com](http://support.sitesell.com/)
+[http://www.bizxpress.com/contact/](http://www.bizxpress.com/contact/)
 
 == Changelog ==
 = 1.0.3 =
