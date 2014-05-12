@@ -3,21 +3,21 @@ Contributors: bizxpress
 Donate link: http://www.bizxpress.com
 Tags: keywords,keyword research,brainstorming,business,business-building,link-building,SEO
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 1.0.3
+Tested up to: 3.9
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Build a successful online business with WordPress.
 
 == Description ==
 
-Meet bizXpress, the only plugin for WordPress that can take you from struggling webmaster or blogger to successful entrepreneur earning a sustainable income from your website.
+Have you struggled to create a successful online business with WordPress? Meet bizXpress.
 
-Under the hood, bizXpress is a powerful web service you can use either from within this plugin or by logging in directly. To use the features, all you have to do is [set up your free account...](https://secure.sitesell.com/build/bxp/order-bxp-lite.html)
+More than just a plugin…
 
-* Having an account means all of your keyword research, notes and niche discoveries are tied to you. By logging in, you can recall your work at any time. 
+Instead of adding another feature to Wordpress, the bizXpress plugin opens the door to the only all-in-one, optimized ebusiness-building system. If you have the will, try the bizXpress way.
 
-We've packed everything you need to build your online business inside of one easy-to-install package. A step-by-step Action Guide. A best of breed keyword brainstorming and niche research tool. Hundreds of business-focused resources. A dedicated, vibrant community of entrepreneurs like you. Top flight customer support. Here's what's inside..
+Specifically adapted for Wordpress users, bizXpress delivers our proven combination of logical process, enterprise-level tools, best-of-breed resources and unparalleled support/community - all through the simple concept of "plugin as portal”…
 
 **The Action Guide**
 
@@ -88,6 +88,9 @@ Please direct your support inquiry directly to our dedicated site and we'll be h
 [http://www.bizxpress.com/contact/](http://www.bizxpress.com/contact/)
 
 == Changelog ==
+= 1.0.4 =
+* Updated readme.txt 
+
 = 1.0.3 =
 * CSS and link enhancements
 
