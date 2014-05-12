@@ -39,7 +39,7 @@
                 <div class="panel panel-info">
                     <div class="panel-heading">
 
-                        <h2><a href="<?php echo $env->link_url('NR'); ?>" target="_blank"><i class="icon-gears big-icon"></i> Research</a></h2>
+                        <h2><a href="<?php echo $env->link_url('NR'); ?>"><i class="icon-gears big-icon"></i> Research</a></h2>
                         <p>
                         Advanced research tools help you make smart business decisions for maximizing results.
                         </p>
