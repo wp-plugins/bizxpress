@@ -3,7 +3,7 @@
 * Plugin Name:   bizXpress
 * Plugin URI:	 http://www.bizxpress.com
 * Description:   bizXpress is the only plugin for WordPress that can take you from struggling webmaster or blogger to successful entrepreneur earning a sustainable income from your website. It contains everything you need to build your online business, from keyword research tools to how-to site-building and monetization articles to supportive forums. 
-* Version:       1.0.4
+* Version:       1.0.5
 * Author:        SiteSell, Inc.
 * Author URI:    http://www.bizxpress.com
 *
@@ -13,7 +13,7 @@
 */
 class BizXpress {
 	
-	const VERSION = '1.0.4';
+	const VERSION = '1.0.5';
 
 	public $domain = 'BizXpress';
 	public $my_opts_slug = 'bxp_options';
@@ -87,7 +87,58 @@ class BizXpress {
 	
 		// Add settings action shortcut
 		add_filter('plugin_action_links', array(&$this, 'add_settings_action_link'),10,2);
+		
+		// Capture the dismiss click
+		add_action('init', array( &$this, 'handle_decomm_dismiss' ) );
+		
+		// Shows the decommissioning message
+		add_action('admin_notices', array( &$this, 'show_decomm_message') );
+		
+		// For the updater
+		$plugin_string = 'bizXpress/bizXpress.php';
+		add_filter( "allow_internal_update_url_{$plugin_string}", '__return_true', 10, 3 );
+		add_filter( "api_urls_{$this->domain}", array( &$this, 'api_urls' ), 10, 1 );
 	}
+	
+	
+	/**
+	 * Code moved from updater class to consumer class in the form of a filter
+	 * @param unknown $urls
+	 * @return multitype:string
+	 */
+	function api_urls( $urls )
+	{
+		return array('PRODUCTION' => 'http://wpplugins.sitesell.com/');
+	}
+	
+	public function handle_decomm_dismiss()
+	{
+		if ( isset($_GET['bxp_decom_msg_dismiss']) && $_GET['bxp_decom_msg_dismiss'] )
+		{
+			update_option('bxp_decomm_dismiss', true);
+		}
+	}
+	
+	public function show_decomm_message()
+	{
+		$is_dismissed = get_option('bxp_decomm_dismiss');
+		
+		if ( ! $is_dismissed ) :
+		
+		?>
+		<div class="update-nag"><p><?php _e('Dear bizXpress User,<br>The plugin developer SiteSell Inc. 
+		will be retiring the existing bizXpress plugin and replacing it with a brand new plugin called 
+		"SBI! for WP." This new plugin is part of a complete online business-building program that thousands 
+		of entrepreneurs have used to build successful online businesses. 
+		Learn more about SBI! for WP at: <a target="_new" href="http://www.sitesell.com/sbiforwp/index.html">http://www.sitesell.com/sbiforwp/</a>.', 
+		$this->domain);?></p>
+		<p style="text-align:right"><a href="?bxp_decom_msg_dismiss=1"><?php _e('Dismiss'); ?></a></p>
+		</div>
+		<?php
+		
+		endif;
+	}
+	
 	
 	/**
 	 * @method set_env
